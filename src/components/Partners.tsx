@@ -1,11 +1,53 @@
+const MicrosoftLogo = () => (
+  <svg viewBox="0 0 23 23" className="w-12 h-12">
+    <path fill="#f35325" d="M1 1h10v10H1z"/>
+    <path fill="#81bc06" d="M12 1h10v10H12z"/>
+    <path fill="#05a6f0" d="M1 12h10v10H1z"/>
+    <path fill="#ffba08" d="M12 12h10v10H12z"/>
+  </svg>
+);
+
+const LenovoLogo = () => (
+  <svg viewBox="0 0 200 40" className="w-24 h-8">
+    <text x="10" y="30" fontFamily="Arial, sans-serif" fontSize="28" fontWeight="bold" fill="#E2231A">lenovo</text>
+  </svg>
+);
+
+const KyoceraLogo = () => (
+  <svg viewBox="0 0 200 40" className="w-24 h-8">
+    <text x="10" y="30" fontFamily="Arial, sans-serif" fontSize="24" fontWeight="bold" fill="#ED1C24">KYOCERA</text>
+  </svg>
+);
+
+const TrendMicroLogo = () => (
+  <svg viewBox="0 0 50 50" className="w-12 h-12">
+    <circle cx="25" cy="25" r="22" fill="#D71920"/>
+    <path d="M15 25 L22 32 L35 18" stroke="white" strokeWidth="4" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
+
+const EatonLogo = () => (
+  <svg viewBox="0 0 120 40" className="w-20 h-8">
+    <text x="5" y="30" fontFamily="Arial, sans-serif" fontSize="26" fontWeight="bold" fill="#005EB8">EATON</text>
+  </svg>
+);
+
+const TeamViewerLogo = () => (
+  <svg viewBox="0 0 50 50" className="w-12 h-12">
+    <rect x="5" y="5" width="40" height="40" rx="8" fill="#0E8EE9"/>
+    <circle cx="25" cy="25" r="8" fill="white"/>
+    <path d="M17 25 L33 25 M25 17 L25 33" stroke="white" strokeWidth="3"/>
+  </svg>
+);
+
 const Partners = () => {
   const partners = [
-    { name: "Microsoft", logo: "M" },
-    { name: "Lenovo", logo: "L" },
-    { name: "Kyocera", logo: "K" },
-    { name: "Trend Micro", logo: "TM" },
-    { name: "Eaton UPS", logo: "E" },
-    { name: "TeamViewer", logo: "TV" },
+    { name: "Microsoft", Logo: MicrosoftLogo },
+    { name: "Lenovo", Logo: LenovoLogo },
+    { name: "Kyocera", Logo: KyoceraLogo },
+    { name: "Trend Micro", Logo: TrendMicroLogo },
+    { name: "Eaton", Logo: EatonLogo },
+    { name: "TeamViewer", Logo: TeamViewerLogo },
   ];
 
   return (
@@ -31,11 +73,9 @@ const Partners = () => {
               key={index}
               className="group bg-card rounded-2xl p-8 shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 flex flex-col items-center justify-center aspect-square"
             >
-              {/* Placeholder Logo */}
-              <div className="w-16 h-16 rounded-xl bg-muted flex items-center justify-center mb-4 group-hover:bg-primary/10 transition-colors">
-                <span className="text-2xl font-display font-bold text-muted-foreground group-hover:text-primary transition-colors">
-                  {partner.logo}
-                </span>
+              {/* Logo */}
+              <div className="mb-4 grayscale group-hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100">
+                <partner.Logo />
               </div>
               <span className="text-sm font-semibold text-foreground text-center">
                 {partner.name}
