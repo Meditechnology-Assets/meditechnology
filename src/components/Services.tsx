@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { 
   Monitor, 
   Cloud, 
@@ -15,36 +16,42 @@ const Services = () => {
       title: "IT & Network Management",
       description: "Managed support, system health checks, backups, and Office 365 migration. Keep your practice running smoothly with proactive IT care.",
       features: ["24/7 Monitoring", "Health Checks", "Office 365 Migration"],
+      link: "/services/it-management",
     },
     {
       icon: Cloud,
       title: "Cloud Services",
       description: "Managed cloud office and virtualisation setup. Access your practice data securely from anywhere with enterprise-grade cloud solutions.",
       features: ["Cloud Migration", "Virtual Desktops", "Secure Access"],
+      link: "/services/cloud-services",
     },
     {
       icon: Server,
       title: "IT Hardware",
       description: "Sales and installation of servers, PCs, and printers. As Lenovo and Kyocera partners, we provide reliable enterprise hardware.",
       features: ["Lenovo Partner", "Kyocera Partner", "Expert Installation"],
+      link: "/services/hardware",
     },
     {
       icon: Shield,
       title: "IT Security",
       description: "Trend Micro protection, data recovery, and comprehensive backup solutions. Protect your patient data with industry-leading security.",
       features: ["Trend Micro", "Data Recovery", "Onsite/Cloud Backup"],
+      link: "/services/security",
     },
     {
       icon: Building2,
       title: "Medical Fitouts",
       description: "Full commercial fitouts for medical centres, including structured cabling, hardware setup, and complete IT infrastructure.",
       features: ["Structured Cabling", "Hardware Setup", "Full Integration"],
+      link: "/services/medical-fitouts",
     },
     {
       icon: Phone,
       title: "VoIP Telephony",
       description: "Nexgen phone systems and voice-over-internet solutions. Modern communication systems designed for healthcare practices.",
       features: ["Nexgen Systems", "VoIP Solutions", "Unified Communications"],
+      link: "/services/voip",
     },
   ];
 
@@ -97,13 +104,13 @@ const Services = () => {
               </div>
 
               {/* Link */}
-              <a
-                href="#contact"
+              <Link
+                to={service.link}
                 className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all"
               >
                 Learn More
                 <ArrowRight className="w-4 h-4" />
-              </a>
+              </Link>
             </div>
           ))}
         </div>
