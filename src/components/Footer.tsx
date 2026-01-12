@@ -8,6 +8,7 @@ const Footer = () => {
     { label: "About Us", href: "#about" },
     { label: "Services", href: "#services" },
     { label: "Partners", href: "#partners" },
+    { label: "Remote Support", href: "#support" },
     { label: "Contact", href: "#contact" },
   ];
 
@@ -18,6 +19,7 @@ const Footer = () => {
     "IT Security",
     "Medical Fitouts",
     "VoIP Telephony",
+    "IT Finance",
   ];
 
   return (

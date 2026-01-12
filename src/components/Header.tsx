@@ -28,6 +28,7 @@ const Header = () => {
     { label: "IT Security", href: "/services/security" },
     { label: "Medical Fitouts", href: "/services/medical-fitouts" },
     { label: "VoIP Telephony", href: "/services/voip" },
+    { label: "IT Finance", href: "/services/finance" },
   ];
 
   const getNavHref = (hash: string) => {
@@ -123,6 +124,14 @@ const Header = () => {
               Partners
             </a>
             <a
+              href={getNavHref("#support")}
+              className={`font-medium transition-colors hover:text-primary ${
+                showScrolledStyle ? "text-foreground" : "text-primary-foreground/90 hover:text-primary-foreground"
+              }`}
+            >
+              Support
+            </a>
+            <a
               href={getNavHref("#contact")}
               className={`font-medium transition-colors hover:text-primary ${
                 showScrolledStyle ? "text-foreground" : "text-primary-foreground/90 hover:text-primary-foreground"
@@ -212,6 +221,13 @@ const Header = () => {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Partners
+              </a>
+              <a
+                href={getNavHref("#support")}
+                className="font-medium text-foreground hover:text-primary transition-colors py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Support
               </a>
               <a
                 href={getNavHref("#contact")}

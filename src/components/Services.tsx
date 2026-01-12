@@ -6,6 +6,7 @@ import {
   Shield, 
   Building2, 
   Phone,
+  Calculator,
   ArrowRight
 } from "lucide-react";
 
@@ -52,6 +53,13 @@ const Services = () => {
       description: "Nexgen phone systems and voice-over-internet solutions. Modern communication systems designed for healthcare practices.",
       features: ["Nexgen Systems", "VoIP Solutions", "Unified Communications"],
       link: "/services/voip",
+    },
+    {
+      icon: Calculator,
+      title: "IT Finance",
+      description: "Flexible leasing and finance options for hardware, servers, and medical fitouts. Spread the cost of your IT investment with tailored payment plans.",
+      features: ["Flexible Terms", "Equipment Leasing", "Fitout Financing"],
+      link: "/services/finance",
     },
   ];
 
