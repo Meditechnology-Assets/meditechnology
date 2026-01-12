@@ -11,6 +11,7 @@ import HardwarePage from "./pages/services/HardwarePage";
 import SecurityPage from "./pages/services/SecurityPage";
 import MedicalFitoutsPage from "./pages/services/MedicalFitoutsPage";
 import VoIPPage from "./pages/services/VoIPPage";
+import FinancePage from "./pages/services/FinancePage";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/services/security" element={<SecurityPage />} />
           <Route path="/services/medical-fitouts" element={<MedicalFitoutsPage />} />
           <Route path="/services/voip" element={<VoIPPage />} />
+          <Route path="/services/finance" element={<FinancePage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
